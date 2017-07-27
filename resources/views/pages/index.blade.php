@@ -1,13 +1,9 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{config('app.name','LSAPP')}}</title>
-    </head>
-    <body>
-        <h1>Welcome to Laravel</h1>
-        <p>This is the laravel application from begining "Youtube Series" </p>
-    </body>
-</html>
+@extends('layouts.app')
+
+@section('content')
+    <div class="jumbotron text-center">
+        <h1>{{$title}}</h1>
+        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-lg btn-primary" href="/login" role="button">Login</a> <a class="btn btn-lg btn-success" href="/register" role="button">Sign up</a></p>
+      </div>
+@endsection
