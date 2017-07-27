@@ -11,6 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+/*
+Route::get('/hello', function () {
+    return '<h1>Hello Usman Haider</h1>';
 });
+Route::get('/users/{id}/{name}',function($id,$name){
+    //return view('pages.about');
+    return "This is user ".$name." with an id => ".$id;
+});
+Route::get('/about',function(){
+    return view('pages.about');
+});
+*/
+
+Route::get('/', 'PagesController@index');
+Route::get('/about', 'PagesController@about');
+Route::get('/services', 'PagesController@services');
